@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - role: ocp_project
+      vars:
+        api_url: "https://openshift.example.com:6443"
+        ocp_username: "clusteradmin"
+        ocp_password: "xxxxxxxxxxx"
+        ocp_verify_ssl: true
+        project_name: "example-project"
+        project_annotation: "env=test"
+        project_action: 'create'
